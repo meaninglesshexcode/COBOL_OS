@@ -6,4 +6,4 @@ start:
     jmp cornol_entry
 segment readable writeable
 stack_top:
-    resb 4096 ; 4 KB stack2 / 2
+    resb 4096
