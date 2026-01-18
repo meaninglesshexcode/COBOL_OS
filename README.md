@@ -16,3 +16,7 @@ Currently this is a prototype of a prototype of a prototype. It is BEYOND alpha,
 
 This is just here for me to be reminded about my project.
 Thanks for visiting.
+
+PS:
+
+I swear to GOD you MUST use GCOBOL for this. GnuCOBOL just *DOES NOT WORK* for this.
