@@ -14,9 +14,13 @@ Currently this is a prototype of a prototype of a prototype. It is BEYOND alpha,
 
 ...So, uh...
 
-This is just here for me to be reminded about my project.
+This is just here for me to be reminded (and feel guilty about) about my project.
 Thanks for visiting.
 
 PS:
 
 I swear to GOD you MUST use GCOBOL for this. GnuCOBOL just *DOES NOT WORK* for this.
+
+PPS:
+
+nineteen lines.
