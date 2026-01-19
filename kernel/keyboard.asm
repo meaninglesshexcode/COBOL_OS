@@ -2,17 +2,18 @@ format ELF64
 public check_keyboard
 
 section '.text' executable
+
 check_keyboard:
-    ; RDI contains pointer to COBOL's buffer (System V calling convention)
-    push rdi           ; save the pointer
-    
+    ; RDI = pointer to buffer (SysV ABI)
+    push rdi                ; preserve pointer (harmless, explicit)
+
 .wait_input:
-    in al, 0x64        ; PS/2 status port
-    test al, 1         ; check if output buffer full
+    in al, 0x64             ; PS/2 status port
+    test al, 1              ; output buffer full?
     jz .wait_input
-    
-    in al, 0x60        ; read the key
-    
-    pop rdi            ; restore pointer
-    mov [rdi], al      ; write key to COBOL's buffer
+
+    in al, 0x60             ; read scancode
+
+    pop rdi                 ; restore pointer
+    mov [rdi], al           ; write into buffer
     ret
