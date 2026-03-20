@@ -1,7 +1,7 @@
 IDENTIFICATION DIVISION.
 PROGRAM-ID. cornol_entry.
 PROCEDURE DIVISION.
-    CALL 'memorymanagement'
+    CALL 'initmemory'
     IF RETURN-CODE <> 0
         STOP RUN
     END-IF
@@ -19,5 +19,5 @@ PROCEDURE DIVISION.
         DISPLAY 'Error calling filesystem'
         STOP RUN
     END-IF
-    CALL 'verbosus'
+    CALL 'verbosus' -- This is going to be the name of the shell!
     STOP RUN.
