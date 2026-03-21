@@ -1,5 +1,6 @@
 IDENTIFICATION DIVISION.
 PROGRAM-ID. initmemory.
+
 DATA DIVISION.
 WORKING-STORAGE SECTION.
 01 heap-memory PIC X(524288).
@@ -7,7 +8,7 @@ WORKING-STORAGE SECTION.
 01 heap-size PIC 9(7) VALUE 524288.
 01 requested-size PIC 9(7) VALUE 0.
 01 allocated-address PIC 9(7) VALUE 0.
-WORKING-STORAGE SECTION.
+
 PROCEDURE DIVISION.
   ALLOCATE-MEMORY.
     IF heap-pointer + requested-size > heap-size
