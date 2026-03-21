@@ -3,8 +3,11 @@ COBOL_OS, My Ambitious Vaporware
 So... You're probably here because you're either:
 
 Bored as all hell
+
 Tired of normal OS
+
 Found me on the web
+
 Or wondering, "How the hell does one code an OS in COBOL?"
 
 Or all four, even! Four is good! Either way, it is important for any viewer to know:
