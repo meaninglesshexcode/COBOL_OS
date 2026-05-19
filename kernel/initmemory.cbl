@@ -20,5 +20,5 @@ PROCEDURE DIVISION.
     
  OUT-OF-MEMORY.
     MOVE 1 TO RETURN-CODE
-    DISPLAY 'Out of 
+    DISPLAY 'Out of Memory.'
     STOP RUN.
