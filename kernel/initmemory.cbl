@@ -3,20 +3,22 @@ PROGRAM-ID. initmemory.
 
 DATA DIVISION.
 WORKING-STORAGE SECTION.
-01 heap-memory PIC X(524288).
-01 heap-pointer PIC 9(7) VALUE 1.
-01 heap-size PIC 9(7) VALUE 524288.
-01 requested-size PIC 9(7) VALUE 0.
-01 allocated-address PIC 9(7) VALUE 0.
+01 HEAP-MEMORY          PIC X(16777216).
+01 HEAP-POINTER         PIC 9(8) VALUE 1.
+01 HEAP-SIZE            PIC 9(8) VALUE 16777216.
+01 REQUESTED-SIZE       PIC 9(8) VALUE 0.
+01 ALLOCATED-ADDRESS    PIC 9(8) VALUE 0.
 
 PROCEDURE DIVISION.
-  ALLOCATE-MEMORY.
-    IF heap-pointer + requested-size > heap-size
+ ALLOCATE-MEMORY.
+    IF HEAP-POINTER + REQUESTED-SIZE > HEAP-SIZE
         GO TO OUT-OF-MEMORY
     END-IF
-    MOVE heap-pointer TO allocated-address
-    COMPUTE heap-pointer = heap-pointer + requested-size
+    MOVE HEAP-POINTER TO ALLOCATED-ADDRESS
+    COMPUTE HEAP-POINTER = HEAP-POINTER + REQUESTED-SIZE
     STOP RUN.
-OUT-OF-MEMORY.
+    
+ OUT-OF-MEMORY.
     MOVE 1 TO RETURN-CODE
+    DISPLAY 'Out of 
     STOP RUN.
